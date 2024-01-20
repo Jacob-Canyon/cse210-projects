@@ -36,6 +36,8 @@ class Program
             Console.Write("Enter Selection:");
             selection = (Console.ReadLine());
 
+            
+            
             if(selection == "1")
             {
                 Entry entry = new Entry();
@@ -62,26 +64,35 @@ class Program
 
             }
 
+            
             else if(selection == "2")
             {
                 journal.DisplayAll();
             }
 
+            
+            
             else if(selection == "3")
             {
                 journal.SaveToFile(journal._entries);
             }
 
+            
+            
             else if(selection == "4")
             {
                 journal.LoadFile(journal._entries);
             }
 
+            
+            
             else if(selection == "5")
             {
                 System.Environment.Exit(0);
             }
 
+            
+            
             else if(selection == "6")
             {
                 Console.WriteLine("Would you like to clear all journal entiers? Y/N");
