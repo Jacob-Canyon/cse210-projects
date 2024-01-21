@@ -4,6 +4,8 @@ using System.Security.Cryptography.X509Certificates;
 using Develop02;
 using System.IO;
 
+
+//I added a method to clear the journal file.
 class Program
 {
     static void Main(string[] args)
@@ -12,15 +14,13 @@ class Program
 
         Console.WriteLine("Welcome to Your Journal App!");
 
-        promptGenerator prompt1 = new promptGenerator();
 
-        
+
+        promptGenerator prompt1 = new promptGenerator();
 
         Journal journal = new Journal();
 
         
-        
-
 
         while(selection != "5")
         {
@@ -110,6 +110,7 @@ class Program
 
             }
   
+            
 
             else
             {
