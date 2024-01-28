@@ -5,6 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        //I added a system to only choose words that have not been blanked out.
 
         string selection = "";
 
