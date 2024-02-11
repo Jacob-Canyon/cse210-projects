@@ -7,12 +7,7 @@ public abstract class Goal
     protected string _points = "";
     protected string _checkbox = "[ ]";
 
-    //public Goal(string name, string description, string points)
-    //{
-        //_shortName = name;
-        //_description = description;
-        //_points = points;
-    //}
+
 
     public abstract void RecordEvent();
 
