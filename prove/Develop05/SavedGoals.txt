@@ -1,0 +1,4 @@
+1000
+SimpleGoal|simple|test|100|[x]
+EternalGoal|eternal|tezt|200
+ChecklistGoal|checklist|test|300|[ ]|2|3|9100
