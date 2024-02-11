@@ -91,6 +91,9 @@ public class GoalManager
     public void DisplayPlayInfo()
     {
         Console.WriteLine($"You have {_score} points.");
+        double level = _score/10000;
+        level = Math.Round(level,1);
+        Console.WriteLine($"Level: {level}");
     }
 
     public void Start()

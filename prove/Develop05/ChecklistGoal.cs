@@ -29,6 +29,22 @@ public class ChecklistGoal : Goal
         _bonus = bonus;
     }
 
+    public override int GetPoints()
+    {
+        if(_amountCompleted >= _target)
+        {
+            return 0;
+        }
+
+        else
+        {
+            int addPoints = int.Parse(_points);
+            addPoints = addPoints + _bonus;
+            return addPoints;
+
+        }
+    }
+
     public override void RecordEvent()
     {
         if(_amountCompleted < _target)
@@ -62,7 +78,7 @@ public class ChecklistGoal : Goal
 
     public override string GetDetailsString()
     {
-        return $"{_checkbox} {_shortName} ({_description} -- Currently completed {_amountCompleted}/{_target})";
+        return $"{_checkbox} {_shortName} ({_description}) -- Currently completed {_amountCompleted}/{_target})";
     }
 
 }
