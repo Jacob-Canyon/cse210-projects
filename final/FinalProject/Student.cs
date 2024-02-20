@@ -2,18 +2,19 @@
 
 public class Student
 {
-    string _name = "";
-    string _grade = "";
-    string _IDNumber = "";
+    protected string _name = "";
+    protected string _grade = "";
+    protected string _IDNumber = "";
 
-    public virtual void AddIncident()
-    {
-
-    }
 
     public virtual void DisplayInfo()
     {
 
+    }
+
+    public virtual string SaveFormat()
+    {
+        return "";
     }
     
     public string GetName()
@@ -21,4 +22,11 @@ public class Student
         string name = _name;
         return name;
     }
+
+    public string GetIDNumber()
+    {
+        string ID = _IDNumber;
+        return ID;
+    }
+
 }
