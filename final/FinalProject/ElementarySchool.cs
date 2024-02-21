@@ -17,9 +17,4 @@ public class ElementarySchool : Student
         string saveFormat = $"ElementarySchool|{_IDNumber}|{_name}|{_grade}|{_teacher}|";
         return saveFormat;
     }
-
-    public override void DisplayInfo()
-    {
-
-    }
 }

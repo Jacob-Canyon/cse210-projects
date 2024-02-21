@@ -7,11 +7,6 @@ public class Student
     protected string _IDNumber = "";
 
 
-    public virtual void DisplayInfo()
-    {
-
-    }
-
     public virtual string SaveFormat()
     {
         return "";
