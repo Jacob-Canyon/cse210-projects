@@ -14,13 +14,8 @@ public class MiddleSchool : Student
 
     public override string SaveFormat()
     {
-        string saveFormat = $"ElementarySchool|{_IDNumber}|{_name}|{_grade}|{_homeroom}|";
+        string saveFormat = $"MiddleSchool|{_IDNumber}|{_name}|{_grade}|{_homeroom}|";
         return saveFormat;
     }
 
-
-    public override void DisplayInfo()
-    {
-
-    }
 }

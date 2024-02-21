@@ -194,21 +194,91 @@ public class IncidentManger
     public void SearchStudent()
     {
         Console.Write("Enter Student ID: ");
-            string studentID = Console.ReadLine();
+        string studentID = Console.ReadLine();
             
 
             foreach (string line in _saves)
             {
-             
+                string[] parts = line.Split("|");
+                if(parts[1] == studentID)
+                {
+                    Console.WriteLine($"Name: {parts[2]} Grade: {parts[3]} Level: {parts[6]} Description: {parts[7]} ");
+                }
+                
             }
     }
 
     public void GenerateReport()
     {
-        foreach (Incident incident in _incidents)
+        int grade1 = 0;
+        int grade2 = 0;
+        int grade3 = 0;
+        int grade4 = 0;
+        int grade5 = 0;
+        int grade6 = 0;
+        int grade7 = 0;
+        int grade8 = 0;
+
+        int middle = 0;
+        int elementary = 0;
+
+        int incidents = _incidents.Count();
+
+        foreach (string line in _saves)
         {
-            incident.DisplayDetails();
+
+            string[] parts = line.Split("|");
+            if (parts[6] == "1")
+            {
+                grade1++;
+            }
+
+            if (parts[6] == "2")
+            {
+                grade2++;
+            }
+            if (parts[6] == "3")
+            {
+                grade3++;
+            }
+            if (parts[6] == "4")
+            {
+                grade4++;
+            }
+            if (parts[6] == "5")
+            {
+                grade5++;
+            }
+            if (parts[6] == "6")
+            {
+                grade6++;
+            }
+
+            if (parts[6] == "7")
+            {
+                grade7++;
+            }
+
+            if (parts[6] == "8")
+            {
+                grade8++;
+            }
+
+            if(parts[0] == "ElementarySchool")
+            {
+                elementary++;
+            }
+
+            if(parts[0] == "MiddleSchool")
+            {
+                middle++;
+            }
         }
+
+        Console.WriteLine($"Total Reported Incidents: {incidents}");
+        Console.WriteLine($"Middle School: {middle}");
+        Console.WriteLine($"Elementary School: {elementary}");
+        Console.WriteLine($"1st Grade: {grade1} 2nd Grade: {grade2} 3rd Grade: {grade3} 4th grade: {grade4} 5th Grade: {grade5} 6th Grade: {grade6} 7th Grade: {grade7} 8th Grade: {grade8}");
     }
 
 
@@ -219,13 +289,15 @@ public class IncidentManger
         while (stop == false)
         {
             Console.WriteLine("Menu: ");
+            Console.WriteLine();
             Console.WriteLine("1. Report Incident");
-            Console.WriteLine("2. Diplay Student");
+            Console.WriteLine("2. Search Student");
             Console.WriteLine("3. Display Behavior Report");
             Console.WriteLine("4. SAVE");
             Console.WriteLine("5. LOAD");
             Console.WriteLine("6. QUIT");
-            Console.WriteLine("Enter Selection: ");
+            Console.WriteLine();
+            Console.Write("Enter Selection: ");
             string Selection = Console.ReadLine();
 
             if (Selection == "1")
@@ -241,7 +313,7 @@ public class IncidentManger
             if (Selection == "2")
             {
                
-            
+                SearchStudent();
             }
 
             if (Selection == "3")
