@@ -194,13 +194,13 @@ public class IncidentManger
     public void SearchStudent()
     {
         Console.Write("Enter Student ID: ");
-        string studentID = Console.ReadLine();
+        string studentId = Console.ReadLine();
             
 
             foreach (string line in _saves)
             {
                 string[] parts = line.Split("|");
-                if(parts[1] == studentID)
+                if(parts[1] == studentId)
                 {
                     Console.WriteLine($"Name: {parts[2]} Grade: {parts[3]} Level: {parts[6]} Description: {parts[7]} ");
                 }
