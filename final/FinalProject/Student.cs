@@ -16,17 +16,5 @@ public class Student
     {
         return "";
     }
-    
-    public string GetName()
-    {
-        string name = _name;
-        return name;
-    }
-
-    public string GetIDNumber()
-    {
-        string ID = _IDNumber;
-        return ID;
-    }
 
 }
