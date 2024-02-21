@@ -19,7 +19,7 @@ public class Level3 : Incident
 
     public override void DisplayDetails()
     {
-        Console.WriteLine($"date: {_date} time: {_time} Level: {_level} Location: {_location} Admin assigned: {_admin} Length of Suspention in days: {_lengthOfSuspention}\n Description: {_descriptionOfEvent}");
+        Console.WriteLine($"Date: {_date} Time: {_time} Level: {_level} Location: {_location} Admin assigned: {_admin} Length of Suspention in days: {_lengthOfSuspention}\n Description: {_descriptionOfEvent}");
     }
 
      public override string SaveFormat()

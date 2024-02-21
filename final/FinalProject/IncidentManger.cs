@@ -75,7 +75,7 @@ public class IncidentManger
 
     public string CreateStudent()
     {
-        Console.Write("1. Elemnetry or 2. Middle school student: ");
+        Console.Write("1. Elementary or 2. Middle school student: ");
         string selection = Console.ReadLine();
 
         Console.Write("Enter student name; ");
@@ -127,7 +127,7 @@ public class IncidentManger
         Console.Write("Time of the incident: ");
         string time = Console.ReadLine();
 
-        Console.Write("description of the event: ");
+        Console.Write("Description of the event: ");
         string description = Console.ReadLine();
 
         Console.Write("Location of the incident: ");
@@ -206,6 +206,14 @@ public class IncidentManger
                 }
                 
             }
+    }
+
+    public void DiplayAllIncidents()
+    {
+        foreach(Incident incident in _incidents)
+        {
+            incident.DisplayDetails();
+        }
     }
 
     public void GenerateReport()
@@ -293,9 +301,10 @@ public class IncidentManger
             Console.WriteLine("1. Report Incident");
             Console.WriteLine("2. Search Student");
             Console.WriteLine("3. Display Behavior Report");
-            Console.WriteLine("4. SAVE");
-            Console.WriteLine("5. LOAD");
-            Console.WriteLine("6. QUIT");
+            Console.WriteLine("4. Display All Incident");
+            Console.WriteLine("5. SAVE");
+            Console.WriteLine("6. LOAD");
+            Console.WriteLine("7. QUIT");
             Console.WriteLine();
             Console.Write("Enter Selection: ");
             string Selection = Console.ReadLine();
@@ -306,14 +315,16 @@ public class IncidentManger
                 string back = CreateIncident();
                 MakeSaveFormat(front,back);
                 
-
-                
             }
 
             if (Selection == "2")
             {
-               
                 SearchStudent();
+            }
+
+            if (Selection == "4")
+            {
+                DiplayAllIncidents();
             }
 
             if (Selection == "3")
@@ -321,17 +332,17 @@ public class IncidentManger
               GenerateReport();
             }
             
-            if (Selection == "4")
+            if (Selection == "5")
             {
                 Save(_saves);
             }
 
-            if (Selection =="5")
+            if (Selection =="6")
             {
                 Load();
             }
 
-            if (Selection =="6")
+            if (Selection =="7")
             {
                 System.Environment.Exit(0);
             }

@@ -19,7 +19,7 @@ public class Level2 : Incident
 
     public override void DisplayDetails()
     {
-        Console.WriteLine($"date: {_date} time: {_time} Level: {_level} Location: {_location} Action Taken: {_actionTaken} Name of Guardian Contacted: {_guardianContacted}\n Description: {_descriptionOfEvent}");
+        Console.WriteLine($"Date: {_date} Time: {_time} Level: {_level} Location: {_location} Action Taken: {_actionTaken} Name of Guardian Contacted: {_guardianContacted}\n Description: {_descriptionOfEvent}");
     }
 
     public override string SaveFormat()

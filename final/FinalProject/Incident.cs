@@ -18,7 +18,7 @@ public class Incident
 
     public virtual void DisplayDetails()
     {
-        Console.WriteLine($"date: {_date} time: {_time} Level: {_level}");
+        Console.WriteLine($"Date: {_date} Time: {_time} Level: {_level}");
     }
 
     public virtual string SaveFormat()
